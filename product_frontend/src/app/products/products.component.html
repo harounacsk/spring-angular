@@ -1,0 +1,26 @@
+<div *ngIf="displayTable">
+    <hr>
+    <table datatable class="row-border hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.price}} €</td>
+                <td>
+                    <button (click)="delete(product.id)">Delete</button>
+                    <span>&nbsp; &nbsp; </span>
+                    <span>&nbsp; &nbsp; </span>
+                    <a routerLink="/nav/update" (click)="loadSelectedProduct(product)">Update</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
