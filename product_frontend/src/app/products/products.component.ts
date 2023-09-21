@@ -11,7 +11,7 @@ import { ShareProductService } from '../services/share-product.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products: Product[] | undefined;
+  products: Product[] = [];
   dtOptions: DataTables.Settings = {};
   displayTable: boolean = false;
 
